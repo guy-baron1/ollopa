@@ -1,2 +1,16 @@
-<p>page-not-found works!</p>
-<button routerLink="/home">Customers</button>
+<div class="not-found-container">
+  <mat-card class="not-found-card">
+    <div class="message-container">
+      <mat-card-content>
+        <p class="message main-message">?הלכנו לאיבוד</p>
+        <h1 class="message sub-message">הגעת לדף שלא קיים</h1>
+      </mat-card-content>
+      <button mat-raised-button
+              routerLink="/home"
+              class="home-button">
+        חזרה לעמוד הראשי
+      </button>
+    </div>
+    <img src="../../../../assets/img/misc/notFound.jpg" class="not-found-image">
+  </mat-card>
+</div>
