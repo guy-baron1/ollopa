@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "ollopa"
+  "defaultProject": "ollopa",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
