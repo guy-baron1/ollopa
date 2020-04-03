@@ -3,7 +3,7 @@ import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { Observable, of as observableOf } from 'rxjs';
 import { catchError, map, startWith, switchMap } from 'rxjs/operators';
-import { SoundService } from '../../shared/services/login.service';
+import { SoundService } from '../../shared/services/sound.service';
 import * as producingActions from './actions';
 
 @Injectable()
