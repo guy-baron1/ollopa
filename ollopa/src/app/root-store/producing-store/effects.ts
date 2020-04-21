@@ -15,14 +15,17 @@ export class ProducingEffects {
     ofType<producingActions.GetSoundsRequestAction>(
       producingActions.ActionTypes.GET_SOUNDS_REQUEST
     ),
-    switchMap(action =>
-      this.soundService.getParameterSounds(action.payload.parameter)
-      .pipe(
-        map(sounds =>
-          new producingActions.GetSoundsSuccessAction({ sounds }))
-      )),
-      catchError(error =>
-        observableOf(new producingActions.GetSoundsFailureAction({ error }))
-      )
+    switchMap((action) =>
+      this.soundService
+        .getParameterSounds(action.payload.parameter)
+        .pipe(
+          map(
+            (sounds) => new producingActions.GetSoundsSuccessAction({ sounds })
+          )
+        )
+    ),
+    catchError((error) =>
+      observableOf(new producingActions.GetSoundsFailureAction({ error }))
+    )
   );
 }

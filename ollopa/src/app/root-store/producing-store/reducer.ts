@@ -7,20 +7,20 @@ export function producingReducer(state = initialState, action: Actions): State {
       return {
         ...state,
         error: null,
-        isLoading: true
+        isLoading: true,
       };
     case ActionTypes.GET_SOUNDS_FAILURE:
       return {
         ...state,
         error: action.payload.error,
-        isLoading: false
+        isLoading: false,
       };
     case ActionTypes.GET_SOUNDS_SUCCESS:
       return {
         ...state,
         sounds: action.payload.sounds,
         error: null,
-        isLoading: false
+        isLoading: false,
       };
     default:
       return state;

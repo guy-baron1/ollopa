@@ -9,7 +9,7 @@ export enum ActionTypes {
 
 export class GetSoundsRequestAction implements Action {
   readonly type = ActionTypes.GET_SOUNDS_REQUEST;
-  constructor(public payload: {parameter: string}) {}
+  constructor(public payload: { parameter: string }) {}
 }
 
 export class GetSoundsFailureAction implements Action {
@@ -19,7 +19,10 @@ export class GetSoundsFailureAction implements Action {
 
 export class GetSoundsSuccessAction implements Action {
   readonly type = ActionTypes.GET_SOUNDS_SUCCESS;
-  constructor(public payload: {sounds: Sound[]}) {}
+  constructor(public payload: { sounds: Sound[] }) {}
 }
 
-export type Actions = GetSoundsRequestAction | GetSoundsFailureAction | GetSoundsSuccessAction;
+export type Actions =
+  | GetSoundsRequestAction
+  | GetSoundsFailureAction
+  | GetSoundsSuccessAction;

@@ -9,5 +9,5 @@ export interface State {
 export const initialState: State = {
   sounds: null,
   isLoading: false,
-  error: null
+  error: null,
 };
