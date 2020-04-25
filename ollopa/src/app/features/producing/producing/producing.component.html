@@ -1,1 +1,5 @@
-<p>producing works!</p>
+<div *ngIf="sounds$">
+  <div *ngFor="let sound of sounds$ | async">
+    {{ sound.path }}
+  </div>
+</div>

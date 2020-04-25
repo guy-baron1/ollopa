@@ -7,7 +7,7 @@ export interface State {
 }
 
 export const initialState: State = {
-  sounds: null,
+  sounds: [{path: 'initialStatePath'}],
   isLoading: false,
   error: null,
 };

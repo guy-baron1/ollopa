@@ -5,7 +5,7 @@ import { Sound } from '../../../shared/models/sound';
 import { RootStoreState, ProducingStoreActions, ProducingStoreSelectors } from '../../../root-store';
 
 @Component({
-  selector: 'app-producing',
+  selector: 'apo-producing',
   templateUrl: './producing.component.html',
   styleUrls: ['./producing.component.scss']
 })

@@ -1,0 +1,43 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+//default theme
+$primary: mat-palette($mat-blue);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+//themes for theme picker
+.red {
+  $primary: mat-palette($mat-red);
+  $theme: mat-light-theme($primary, $accent, $warn);
+  @include angular-material-theme($theme);
+}
+.orange {
+  $primary: mat-palette($mat-orange);
+  $theme: mat-light-theme($primary, $accent, $warn);
+  @include angular-material-theme($theme);
+}
+.yellow {
+  $primary: mat-palette($mat-yellow);
+  $theme: mat-light-theme($primary, $accent, $warn);
+  @include angular-material-theme($theme);
+}
+.green {
+  $primary: mat-palette($mat-green);
+  $theme: mat-light-theme($primary, $accent, $warn);
+  @include angular-material-theme($theme);
+}
+.blue {
+  $primary: mat-palette($mat-blue);
+  $theme: mat-light-theme($primary, $accent, $warn);
+  @include angular-material-theme($theme);
+}
+.indigo {
+  $primary: mat-palette($mat-indigo);
+  $theme: mat-light-theme($primary, $accent, $warn);
+  @include angular-material-theme($theme);
+}

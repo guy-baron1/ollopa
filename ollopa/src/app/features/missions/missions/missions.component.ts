@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-missions',
+  selector: 'apo-missions',
   templateUrl: './missions.component.html',
   styleUrls: ['./missions.component.scss']
 })
