@@ -1,0 +1,14 @@
+.color-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+.color-circle {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+.selected-color {
+  border: 1px solid black;
+}
