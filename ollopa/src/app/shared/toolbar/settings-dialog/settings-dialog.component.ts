@@ -8,19 +8,19 @@ import { ThemeService } from 'src/app/core/services/theme.service';
   styleUrls: ['./settings-dialog.component.scss'],
 })
 export class SettingsDialogComponent implements OnInit {
-  constructor(public dialogRef: MatDialogRef<SettingsDialogComponent>,
-              public themeService: ThemeService) {}
-  selectedColor: string;
-  colors: string[];
+  constructor(private dialogRef: MatDialogRef<SettingsDialogComponent>,
+              private themeService: ThemeService) {}
+  selectedTheme: string;
+  themes: string[];
   selectedSection: string;
   sections: string[] = ['הרצליה', 'גן יבנה', 'אור יהודה', 'חולון'];
 
   ngOnInit(): void {
-    this.colors = this.themeService.getAvailableColors();
+    this.themes = this.themeService.getAvailableThemes();
   }
 
-  onColorClicked(color: string) {
-    this.selectedColor = color;
+  onColorClicked(theme: string) {
+    this.selectedTheme = theme;
   }
 
   onCancel(): void {
@@ -28,7 +28,7 @@ export class SettingsDialogComponent implements OnInit {
   }
 
   onConfirm(): void {
-    // todo: update new theme/section
+    this.themeService.setTheme(this.selectedTheme);
     this.dialogRef.close();
   }
 }

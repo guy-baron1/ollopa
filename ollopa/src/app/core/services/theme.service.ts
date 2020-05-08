@@ -5,12 +5,12 @@ import { Subject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ThemeService {
-  private colors: string[] = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo'];
+  private themes: string[] = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo'];
   private theme = new Subject<string>();
   public appTheme: Observable<string> = this.theme.asObservable();
 
-  getAvailableColors(): string[] {
-    return this.colors;
+  getAvailableThemes(): string[] {
+    return this.themes;
   }
 
   setTheme(newTheme: string): void {

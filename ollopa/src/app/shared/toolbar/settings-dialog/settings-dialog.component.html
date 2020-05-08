@@ -2,12 +2,12 @@
   הגדרות
 </h2>
 <div mat-dialog-content class="color-container">
-  <div *ngFor="let color of colors">
+  <div *ngFor="let theme of themes">
     <div
       class="color-circle"
-      [ngClass]="{ 'selected-color': selectedColor === color }"
-      [ngStyle]="{ 'background-color': color }"
-      (click)="onColorClicked(color)"
+      [ngClass]="{ 'selected-color': selectedTheme === theme }"
+      [ngStyle]="{ 'background-color': theme }"
+      (click)="onColorClicked(theme)"
     ></div>
   </div>
 </div>
