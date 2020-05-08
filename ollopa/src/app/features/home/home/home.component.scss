@@ -1,0 +1,19 @@
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 65%;
+}
+.main-title-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.main-title-text {
+  font: bold 100px Arial;
+}
+.main-logo {
+  max-width: 7%;
+  height: auto;
+}
