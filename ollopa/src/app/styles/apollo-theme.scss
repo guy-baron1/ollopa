@@ -11,11 +11,6 @@ $theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);
 
 //themes for theme picker
-.red {
-  $primary: mat-palette($mat-red);
-  $theme: mat-light-theme($primary, $accent, $warn);
-  @include angular-material-theme($theme);
-}
 .orange {
   $primary: mat-palette($mat-orange);
   $theme: mat-light-theme($primary, $accent, $warn);
@@ -38,6 +33,16 @@ $theme: mat-light-theme($primary, $accent, $warn);
 }
 .indigo {
   $primary: mat-palette($mat-indigo);
+  $theme: mat-light-theme($primary, $accent, $warn);
+  @include angular-material-theme($theme);
+}
+.teal {
+  $primary: mat-palette($mat-teal);
+  $theme: mat-light-theme($primary, $accent, $warn);
+  @include angular-material-theme($theme);
+}
+.brown {
+  $primary: mat-palette($mat-brown);
   $theme: mat-light-theme($primary, $accent, $warn);
   @include angular-material-theme($theme);
 }

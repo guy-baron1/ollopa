@@ -8,7 +8,7 @@ export const THEME_LOCAL_STORAGE_KEY = 'THEME';
   providedIn: 'root'
 })
 export class ThemeService {
-  private themes: string[] = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo'];
+  private themes: string[] = ['orange', 'yellow', 'green', 'blue', 'indigo', 'teal', 'brown'];
   private theme = new Subject<string>();
   public appTheme: Observable<string> = this.theme.asObservable();
 
