@@ -14,18 +14,18 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Not unsubscribing because app.component will be instanciated only once (at startup)
+    this.initTheming();
+  }
+
+  private initTheming(): void {
+    // No need for unsubscribe because app.component will only be instanciated once (at startup)
     this.themeService.appTheme.subscribe((theme) => {
-      this.removeExistingThemes();
+      this.themeService.getAvailableThemes().forEach((availableTheme) => {
+        this.renderer.removeClass(document.body, availableTheme);
+      });
       //  Adding the class to the body in order for it to be applied to
       //  components rendered in outside of app-root (for example dialogs)
       this.renderer.addClass(document.body, theme);
-    });
-  }
-
-  removeExistingThemes(): void {
-    this.themeService.getAvailableThemes().forEach((theme) => {
-      this.renderer.removeClass(document.body, theme);
     });
   }
 }
