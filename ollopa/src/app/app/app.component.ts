@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { ThemeService } from '../core/services/theme.service';
+import { ThemeService, THEME_LOCAL_STORAGE_KEY, } from '../core/services/theme.service';
+import { LocalStorageService } from '../core/services/local-storage.service';
 
 @Component({
   selector: 'apo-root',
@@ -7,9 +8,10 @@ import { ThemeService } from '../core/services/theme.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  theme: string;
+  readonly themeLocalStorageKey = THEME_LOCAL_STORAGE_KEY;
   constructor(
     private themeService: ThemeService,
+    private localStorageService: LocalStorageService,
     private renderer: Renderer2
   ) {}
 
@@ -18,6 +20,11 @@ export class AppComponent implements OnInit {
   }
 
   private initTheming(): void {
+    const initialTheme = this.localStorageService.getItem(this.themeLocalStorageKey);
+    if (initialTheme) {
+      this.renderer.addClass(document.body, initialTheme);
+    }
+
     // No need for unsubscribe because app.component will only be instanciated once (at startup)
     this.themeService.appTheme.subscribe((theme) => {
       this.themeService.getAvailableThemes().forEach((availableTheme) => {
