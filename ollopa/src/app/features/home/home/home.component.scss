@@ -1,7 +1,7 @@
 @mixin main-title-text-color ($theme) {
   $primary: map-get($theme, primary);
   .main-title-text {
-    font: bold 100px Arial;
+    font: bold 100px Coco Gothic;
     color: mat-color($primary);
   }
 }
@@ -18,6 +18,7 @@
   height: 100%;
 }
 .main-logo {
-  height: 92px;
-  width: 92px;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 15px;
 }
