@@ -5,7 +5,6 @@
     color: mat-color($primary);
   }
 }
-
 .home-page-container {
   display: flex;
   flex-direction: column;
@@ -18,12 +17,6 @@
   align-items: center;
   height: 100%;
 }
-
-// .main-title-text {
-//   font: bold 100px Arial;
-//   color: mat-color($primary);
-// }
-
 .main-logo {
   max-width: 7%;
   height: auto;
