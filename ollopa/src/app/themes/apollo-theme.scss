@@ -12,6 +12,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);
 
 @mixin init-mixins($theme) {
+  // All mixins that use our custom theme need to be included here
   @include angular-material-theme($theme);
   @include main-title-text-color($theme);
 }
