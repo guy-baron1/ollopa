@@ -21,6 +21,7 @@ export class SettingsDialogComponent implements OnInit {
 
   onColorClicked(theme: string) {
     this.selectedTheme = theme;
+    this.themeService.setTheme(this.selectedTheme);
   }
 
   onCancel(): void {
@@ -28,7 +29,6 @@ export class SettingsDialogComponent implements OnInit {
   }
 
   onConfirm(): void {
-    this.themeService.setTheme(this.selectedTheme);
     this.dialogRef.close();
   }
 }

@@ -1,5 +1,6 @@
-@import '~@angular/material/theming';
-@import '../features/home/home/home.component';
+@import "~@angular/material/theming";
+@import "../features/home/home/home.component";
+@import "./global-classes";
 
 @include mat-core();
 
@@ -8,17 +9,11 @@ $primary: mat-palette($mat-blue);
 $accent: mat-palette($mat-pink, A200, A100, A400);
 $warn: mat-palette($mat-red);
 $theme: mat-light-theme($primary, $accent, $warn);
-@include angular-material-theme($theme);
+@include init-mixins($theme);
 
 @font-face {
   font-family: Coco Gothic;
   src: url(assets/fonts/coco-gothic.regular.ttf) format("truetype");
-}
-
-@mixin init-mixins($theme) {
-  // All mixins that use our custom theme need to be included here
-  @include angular-material-theme($theme);
-  @include main-title-text-color($theme);
 }
 
 //themes for theme picker

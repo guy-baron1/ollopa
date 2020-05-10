@@ -1,0 +1,13 @@
+@mixin global-classes($theme) {
+  $primary: map-get($theme, primary);
+
+  .main-theme-text-color {
+    color: mat-color($primary);
+  }
+}
+
+@mixin init-mixins($theme) {
+  // All mixins that use our custom theme need to be included here
+  @include angular-material-theme($theme);
+  @include global-classes($theme);
+}

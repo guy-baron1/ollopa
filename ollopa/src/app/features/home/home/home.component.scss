@@ -1,10 +1,7 @@
-@mixin main-title-text-color ($theme) {
-  $primary: map-get($theme, primary);
-  .main-title-text {
-    font: bold 100px Coco Gothic;
-    color: mat-color($primary);
-  }
+.main-title-text {
+  font: bold 100px Coco Gothic;
 }
+
 .home-page-container {
   display: flex;
   flex-direction: column;
