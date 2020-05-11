@@ -24,10 +24,6 @@ export class SettingsDialogComponent implements OnInit {
     this.themeService.setTheme(this.selectedTheme);
   }
 
-  onCancel(): void {
-    this.dialogRef.close();
-  }
-
   onConfirm(): void {
     this.dialogRef.close();
   }

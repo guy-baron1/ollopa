@@ -12,16 +12,15 @@
   </div>
 </div>
 <div mat-dialog-content>
-  <mat-form-field>
+  <mat-form-field class="override-text-align">
     <mat-label>בחר זירה</mat-label>
     <mat-select [(value)]="selectedSection">
-      <mat-option *ngFor="let section of sections" [value]="section">
+      <mat-option *ngFor="let section of sections" [value]="section" class="override-text-align">
         {{ section }}
       </mat-option>
     </mat-select>
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onConfirm()" color="primary">שמור</button>
-  <button mat-button (click)="onCancel()" color="warn">ביטול</button>
+  <button mat-button (click)="onConfirm()" color="primary">אישור</button>
 </div>

@@ -3,9 +3,22 @@
     <div>
       AP
     </div>
-    <img src="assets/img/logo/apollo-logo.png" class="main-logo"/>
+    <img src="assets/img/logo/apollo-logo.png" class="main-logo" />
     <div>
       LLO
+    </div>
+  </div>
+  <div class="actions-container">
+    <mat-form-field class="search override-text-align">
+      <mat-label>חיפוש</mat-label>
+      <input matInput type="text" [(ngModel)]="searchValue" />
+    </mat-form-field>
+    <div class="buttons-container">
+      <div *ngFor="let nameRoutePair of buttonNamesToRoutes">
+        <button mat-raised-button color="primary" class="main-page-button">
+          {{ nameRoutePair.name }}
+        </button>
+      </div>
     </div>
   </div>
 </div>

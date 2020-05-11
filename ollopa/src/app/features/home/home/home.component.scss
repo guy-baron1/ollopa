@@ -1,21 +1,40 @@
 .main-title-text {
   font: bold 100px Coco Gothic;
 }
-
 .home-page-container {
   display: flex;
   flex-direction: column;
-  height: 65%;
+  align-items: center;
+  margin-top: 10%;
 }
 .main-title-container {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 .main-logo {
   height: 100px;
   width: 100px;
   margin-bottom: 15px;
+}
+.actions-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.search {
+  width: 100%;
+}
+.buttons-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.main-page-button {
+  width: 110px;
 }

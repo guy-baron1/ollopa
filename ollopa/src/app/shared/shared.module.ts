@@ -9,6 +9,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { SettingsDialogComponent } from './toolbar/settings-dialog/settings-dialog.component';
 import { MatSelectModule } from '@angular/material/select';
 
+const materialModules = [
+  MatToolbarModule,
+  MatIconModule,
+  MatButtonModule,
+  MatDialogModule,
+  MatSelectModule,
+];
+
 @NgModule({
   declarations: [
     ToolbarComponent,
@@ -16,12 +24,8 @@ import { MatSelectModule } from '@angular/material/select';
   ],
   imports: [
     CommonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
     HttpClientModule,
-    MatDialogModule,
-    MatSelectModule,
+    ...materialModules,
   ],
   exports: [
     ToolbarComponent,
