@@ -1,6 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { ThemeService, THEME_LOCAL_STORAGE_KEY, } from '../core/services/theme.service';
-import { LocalStorageService } from '../core/services/local-storage.service';
+import { ThemeService } from '../core/services/theme.service';
 
 @Component({
   selector: 'apo-root',
@@ -8,10 +7,8 @@ import { LocalStorageService } from '../core/services/local-storage.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  readonly themeLocalStorageKey = THEME_LOCAL_STORAGE_KEY;
   constructor(
     private themeService: ThemeService,
-    private localStorageService: LocalStorageService,
     private renderer: Renderer2
   ) {}
 
@@ -20,7 +17,7 @@ export class AppComponent implements OnInit {
   }
 
   private initTheming(): void {
-    const initialTheme = this.localStorageService.getItem(this.themeLocalStorageKey);
+    const initialTheme = this.themeService.getInitialTheme();
     if (initialTheme) {
       this.renderer.addClass(document.body, initialTheme);
     }

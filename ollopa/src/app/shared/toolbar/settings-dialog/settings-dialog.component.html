@@ -14,7 +14,7 @@
 <div mat-dialog-content>
   <mat-form-field class="override-text-align">
     <mat-label>בחר זירה</mat-label>
-    <mat-select [(value)]="selectedSection">
+    <mat-select [value]="selectedSection$ | async" (selectionChange)="onSectionChanged($event.value)">
       <mat-option *ngFor="let section of sections" [value]="section" class="override-text-align">
         {{ section }}
       </mat-option>

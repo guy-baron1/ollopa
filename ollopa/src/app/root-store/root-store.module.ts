@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { ProducingStoreModule } from './producing-store/producing-store.module';
+import { ProducingStoreModule } from './producing-store';
+import { GlobalStoreModule } from './global-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../../environments/environment';
 
@@ -13,6 +14,7 @@ import { environment } from '../../environments/environment';
   imports: [
     CommonModule,
     ProducingStoreModule,
+    GlobalStoreModule,
     StoreModule.forRoot({}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot([])
