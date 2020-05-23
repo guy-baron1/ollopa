@@ -17,7 +17,7 @@
     </mat-form-field>
     <div class="buttons-container">
       <div *ngFor="let nameRoutePair of buttonNamesToRoutes">
-        <button mat-raised-button color="primary" class="main-page-button">
+        <button mat-raised-button color="primary" class="main-page-button" routerLink="{{nameRoutePair.route}}">
           {{ nameRoutePair.name }}
         </button>
       </div>

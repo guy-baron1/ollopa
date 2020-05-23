@@ -36,10 +36,10 @@ export class HomeComponent implements OnInit {
     GlobalStoreSelectors.selectGlobalSection
   );
   public buttonNamesToRoutes: ButtonToRoute[] = [
-    { name: 'משימות', route: 'temp' },
-    { name: 'תמציות', route: 'temp' },
-    { name: 'גרף הידע', route: 'temp' },
-    { name: 'מנועים', route: 'temp' },
+    { name: 'משימות', route: '/missions' },
+    { name: 'תמציות', route: '/search/gists' },
+    { name: 'גרף הידע', route: '/knowledgeGraph' },
+    { name: 'מנועים', route: '/engines' },
   ];
 
   ngOnInit(): void {
