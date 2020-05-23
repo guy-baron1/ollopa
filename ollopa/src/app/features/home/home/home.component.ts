@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
   public buttonNamesToRoutes: ButtonToRoute[] = [
     { name: 'משימות', route: '/missions' },
     { name: 'תמציות', route: '/search/gists' },
-    { name: 'גרף הידע', route: '/knowledgeGraph' },
+    { name: 'גרף הידע', route: '/knowledge-graph' },
     { name: 'מנועים', route: '/engines' },
   ];
 

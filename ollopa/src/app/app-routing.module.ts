@@ -32,6 +32,13 @@ const routes: Routes = [
       import('./features/search/search.module').then((m) => m.SearchModule),
   },
   {
+    path: 'knowledge-graph',
+    loadChildren: () =>
+      import('./features/knowledge-graph/knowledge-graph.module').then(
+        (m) => m.KnowledgeGraphModule
+      ),
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./features/page-not-found/page-not-found.module').then(
