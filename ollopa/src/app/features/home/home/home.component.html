@@ -1,5 +1,6 @@
 <div class="home-page-container">
   <div class="main-title-container main-theme-text-color main-title-text">
+    <h2 class="section">{{section$ | async}}</h2>
     <div>
       AP
     </div>
@@ -8,10 +9,10 @@
       LLO
     </div>
   </div>
-  <h2 class="section">{{section$ | async}}</h2>
   <div class="actions-container">
     <mat-form-field class="search override-text-align">
-      <mat-label>חיפוש</mat-label>
+      <mat-label>חפש משהו או משהו אחר</mat-label>
+      <mat-icon svgIcon="search" matPrefix class="searchIcon"></mat-icon>
       <input matInput type="text" [(ngModel)]="searchValue" />
     </mat-form-field>
     <div class="buttons-container">

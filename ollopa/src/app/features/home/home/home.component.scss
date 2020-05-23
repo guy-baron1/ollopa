@@ -20,8 +20,8 @@
 }
 .section {
   color: gray;
-  margin-right: 500px;
-  margin-top: -30px;
+  margin-right: 20px;
+  margin-top: 55px;
 }
 .actions-container {
   width: 30%;
@@ -33,6 +33,11 @@
 .search {
   width: 100%;
 }
+.searchIcon {
+  font-size: 20px;
+  vertical-align: sub;
+  margin-left: 5px;
+}
 .buttons-container {
   margin-top: 15px;
   display: flex;
@@ -42,4 +47,5 @@
 }
 .main-page-button {
   width: 140px;
+  font-size: large;
 }
