@@ -1,8 +1,19 @@
 mat-toolbar {
   height: 40px;
 }
-.toolbar-buttons-container {
+.toolbar-left-items {
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
+}
+.toolbar-right-items {
+  display: flex;
+  flex-direction: row;
+}
+.home-icon {
+  height: 43px;
+  width: 43px;
+  align-items: flex-end;
+  outline: none;
+  cursor: pointer;
 }

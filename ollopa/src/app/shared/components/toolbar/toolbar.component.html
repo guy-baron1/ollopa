@@ -1,7 +1,11 @@
 <mat-toolbar color="primary">
-  <span class="toolbar-buttons-container">
+  <div class="toolbar-right-items">
+    <!--TODO: figure out how we did the toolbar-outline-extension thing-->
+    <img src="assets/img/logo/apollo-logo.png" routerLink="home" class="home-icon" />
+  </div>
+  <div class="toolbar-left-items">
     <button mat-button (click)="openSettingsDialog()">
       <mat-icon svgIcon="settings"></mat-icon>
     </button>
-  </span>
+  </div>
 </mat-toolbar>
