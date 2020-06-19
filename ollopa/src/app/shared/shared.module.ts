@@ -11,6 +11,7 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SettingsDialogComponent } from './components/settings-dialog/settings-dialog.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 const materialModules = [
   MatToolbarModule,
@@ -21,8 +22,8 @@ const materialModules = [
 ];
 
 @NgModule({
-  declarations: [ToolbarComponent, SettingsDialogComponent],
+  declarations: [ToolbarComponent, SettingsDialogComponent, TimelineComponent],
   imports: [CommonModule, HttpClientModule, RouterModule, ...materialModules],
-  exports: [ToolbarComponent, MatIconModule],
+  exports: [ToolbarComponent, TimelineComponent],
 })
 export class SharedModule {}
