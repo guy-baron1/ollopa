@@ -5,12 +5,7 @@ import { LocalStorageService } from './services/local-storage.service';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-  ],
-  providers: [
-    ThemeService,
-    LocalStorageService,
-  ]
+  imports: [CommonModule],
+  providers: [ThemeService, LocalStorageService],
 })
-export class CoreModule { }
+export class CoreModule {}

@@ -4,12 +4,8 @@ import { CommonModule } from '@angular/common';
 import { KnowledgeGraphRoutingModule } from './knowledge-graph-routing.module';
 import { KnowledgeGraphComponent } from './knowledge-graph/knowledge-graph.component';
 
-
 @NgModule({
   declarations: [KnowledgeGraphComponent],
-  imports: [
-    CommonModule,
-    KnowledgeGraphRoutingModule
-  ]
+  imports: [CommonModule, KnowledgeGraphRoutingModule],
 })
-export class KnowledgeGraphModule { }
+export class KnowledgeGraphModule {}

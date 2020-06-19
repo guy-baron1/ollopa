@@ -5,15 +5,13 @@ import { StoreModule } from '@ngrx/store';
 import { ProducingEffects } from './effects';
 import { producingReducer } from './reducer';
 
-
-
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     StoreModule.forFeature('producing', producingReducer),
-    EffectsModule.forFeature([ProducingEffects])
+    EffectsModule.forFeature([ProducingEffects]),
   ],
-  providers: [ProducingEffects]
+  providers: [ProducingEffects],
 })
-export class ProducingStoreModule { }
+export class ProducingStoreModule {}

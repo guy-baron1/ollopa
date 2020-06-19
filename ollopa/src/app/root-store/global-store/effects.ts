@@ -16,13 +16,8 @@ export class GlobalEffects {
       globalActions.ActionTypes.GET_SECTION_REQUEST
     ),
     switchMap(() =>
-      observableOf(
-        this.userService.getSection()
-      )
-      .pipe(
-        map(
-          (section) => new globalActions.GetSectionSuccessAction({ section })
-        )
+      observableOf(this.userService.getSection()).pipe(
+        map((section) => new globalActions.GetSectionSuccessAction({ section }))
       )
     ),
     catchError((error) =>
@@ -36,13 +31,8 @@ export class GlobalEffects {
       globalActions.ActionTypes.SET_SECTION_REQUEST
     ),
     switchMap((action) =>
-      observableOf(
-        this.userService.setSection(action.payload.section)
-      )
-      .pipe(
-        map(
-          () => new globalActions.SetSectionSuccessAction()
-        )
+      observableOf(this.userService.setSection(action.payload.section)).pipe(
+        map(() => new globalActions.SetSectionSuccessAction())
       )
     ),
     catchError((error) =>

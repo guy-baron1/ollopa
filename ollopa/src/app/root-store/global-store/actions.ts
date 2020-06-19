@@ -39,8 +39,6 @@ export class SetSectionSuccessAction implements Action {
   constructor() {}
 }
 
-
-
 export type Actions =
   | GetSectionRequestAction
   | GetSectionFailureAction

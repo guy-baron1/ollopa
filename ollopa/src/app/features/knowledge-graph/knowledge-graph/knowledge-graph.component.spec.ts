@@ -8,9 +8,8 @@ describe('KnowledgeGraphComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ KnowledgeGraphComponent ]
-    })
-    .compileComponents();
+      declarations: [KnowledgeGraphComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

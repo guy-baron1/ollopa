@@ -8,7 +8,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
-
 const materialModules = [
   MatInputModule,
   MatFormFieldModule,
@@ -18,11 +17,6 @@ const materialModules = [
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    FormsModule,
-    ...materialModules,
-  ]
+  imports: [CommonModule, HomeRoutingModule, FormsModule, ...materialModules],
 })
-export class HomeModule { }
+export class HomeModule {}

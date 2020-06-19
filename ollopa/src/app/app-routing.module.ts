@@ -29,9 +29,7 @@ const routes: Routes = [
   {
     path: 'search',
     loadChildren: () =>
-      import('./features/search/search.module').then(
-        (m) => m.SearchModule
-      ),
+      import('./features/search/search.module').then((m) => m.SearchModule),
   },
   {
     path: 'knowledge-graph',
@@ -40,7 +38,11 @@ const routes: Routes = [
         (m) => m.KnowledgeGraphModule
       ),
   },
-  { path: 'engines', loadChildren: () => import('./features/engines/engines.module').then(m => m.EnginesModule) },
+  {
+    path: 'engines',
+    loadChildren: () =>
+      import('./features/engines/engines.module').then((m) => m.EnginesModule),
+  },
   {
     path: '**',
     loadChildren: () =>

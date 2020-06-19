@@ -7,8 +7,6 @@ import { GlobalStoreModule } from './global-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../../environments/environment';
 
-
-
 @NgModule({
   declarations: [],
   imports: [
@@ -17,7 +15,7 @@ import { environment } from '../../environments/environment';
     GlobalStoreModule,
     StoreModule.forRoot({}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([])
-  ]
+    EffectsModule.forRoot([]),
+  ],
 })
-export class RootStoreModule { }
+export class RootStoreModule {}

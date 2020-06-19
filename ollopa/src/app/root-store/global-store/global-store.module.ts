@@ -10,8 +10,8 @@ import { globalReducer } from './reducer';
   imports: [
     CommonModule,
     StoreModule.forFeature('global', globalReducer),
-    EffectsModule.forFeature([GlobalEffects])
+    EffectsModule.forFeature([GlobalEffects]),
   ],
-  providers: [GlobalEffects]
+  providers: [GlobalEffects],
 })
-export class GlobalStoreModule { }
+export class GlobalStoreModule {}

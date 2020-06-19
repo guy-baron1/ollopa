@@ -4,11 +4,10 @@ import { LocalStorageService } from 'src/app/core/services/local-storage.service
 const SECTION_LOCAL_STORAGE_KEY = 'SECTION';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-
-  constructor(private localStorageService: LocalStorageService) { }
+  constructor(private localStorageService: LocalStorageService) {}
 
   getSection(): string {
     return this.localStorageService.getItem(SECTION_LOCAL_STORAGE_KEY);
