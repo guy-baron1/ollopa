@@ -35,36 +35,42 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
       maxItems: 2,
       showStipes: true,
     },
-    zoomMax: 700000,
+    zoomMin: 25000,
+    zoomMax: 25000000,
+    selectable: false,
+    tooltip: {
+      template: item => item.content,
+      delay: 0,
+    },
     onInitialDrawComplete: () => this.timeline.moveTo(Date.now()),
   };
   private demoItems: DataItemCollectionType = [
     {
       id: 1,
       content: 'item1',
-      start: '2020-06-19 13:00:00',
-      end: '2020-06-19 18:00:00',
+      start: Date.now() - 15000,
+      end: Date.now() + 15000,
       group: 1,
     },
     {
       id: 2,
       content: 'item2',
-      start: '2018-08-21 14:00:00',
-      end: '2018-08-21 15:00:00',
-      group: 1,
+      start: Date.now() - 15000,
+      end: Date.now() + 15000,
+      group: 2,
     },
     {
       id: 3,
       content: 'item3',
-      start: '2018-08-21 16:00:00',
-      end: '2018-08-21 17:00:00',
+      start: Date.now() - 15000,
+      end: Date.now() + 15000,
       group: 3,
     },
     {
       id: 4,
       content: 'item4',
-      start: '2018-08-21 18:00:00',
-      end: '2018-08-21 19:00:00',
+      start: Date.now() - 15000,
+      end: Date.now() + 15000,
       group: 4,
     },
   ];
@@ -85,10 +91,15 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
       this.demoGroups,
       this.demoOptions
     );
+    this.timeline.on('click', ev => this.onTimelineClicked(ev));
     this.currentTimeUpdateInterval = setInterval(
       () => this.timeline.setCurrentTime(Date.now()),
       1000
     );
+  }
+
+  private onTimelineClicked(event): void {
+    console.log(event);
   }
 
   ngOnDestroy(): void {
