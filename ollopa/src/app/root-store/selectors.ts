@@ -6,9 +6,9 @@ import { GlobalStoreSelectors } from './global-store';
 // For example getting global loading state, global error, global isLoading, etc...
 
 export const selectError: MemoizedSelector<object, string> = createSelector(
-  ProducingStoreSelectors.selectProducingError,
   GlobalStoreSelectors.selectGlobalError,
-  (producingError: string, globalError: string) => {
-    return producingError || globalError;
+  ProducingStoreSelectors.selectProducingError,
+  ( globalError: string, producingError: string) => {
+    return globalError || producingError;
   }
 );
