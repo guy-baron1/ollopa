@@ -99,6 +99,7 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
   }
 
   private onTimelineClicked(event): void {
+    // TODO: move timeline to item starttime
     console.log(event);
   }
 
