@@ -91,7 +91,7 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
       this.demoGroups,
       this.demoOptions
     );
-    this.timeline.on('click', ev => this.onTimelineClicked(ev));
+    this.timeline.on('mouseDown', ev => this.onTimelineClicked(ev));
     this.currentTimeUpdateInterval = setInterval(
       () => this.timeline.setCurrentTime(Date.now()),
       1000
@@ -100,7 +100,7 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
 
   private onTimelineClicked(event): void {
     // TODO: move timeline to item starttime
-    console.log(event);
+    this.timeline.moveTo(event.time);
   }
 
   ngOnDestroy(): void {
